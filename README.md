@@ -143,5 +143,3 @@ Email: [nitanshu@example.com](mailto:nitanshu@example.com)
 
 > Build, observe, and automate your meetings seamlessly with **Observo**! 🚀
 
-```
-```
