@@ -1,4 +1,4 @@
-````markdown
+
 # Observo
 
 **A Modern Smart Agent for Observing, Planning, and Summarizing Daily Meetings**
