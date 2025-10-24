@@ -10,7 +10,7 @@
 ## 🌟 Overview
 
 **Observo** is an intelligent, event-driven observability agent that demonstrates how AI models can plan, execute, and summarize tasks while maintaining clear event logs.  
-Built with **OpenRouter (GPT-4o-mini)**, it showcases structured AI reasoning and logging using Python — ideal for hackathons, observability tools, and lightweight automation agents.
+Built with **OpenRouter ( OpenAI GPT-4o-mini)**, it showcases structured AI reasoning and logging using Python - ideal for hackathons, observability tools, and lightweight automation agents.
 
 🎥 **Demo Video:** [Click Here to Watch](https://drive.google.com/drive/folders/1Km6RDOt2cz7LKfz3ockOlvxfc91w5VkS)
 
