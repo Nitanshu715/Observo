@@ -1,145 +1,192 @@
+# 🚀 Observo: The AI-Powered Observability Agent
 
-# Observo
-
-**A Modern Smart Agent for Observing, Planning, and Summarizing Daily Meetings**
-
-[🎬 Demo Video](https://drive.google.com/drive/folders/1Km6RDOt2cz7LKfz3ockOlvxfc91w5VkS)
-
----
-
-## 🔹 Project Overview
-Observo is a Python-based agent that leverages OpenAI's GPT-4o-mini to:
-
-1. **Plan** the steps for fetching calendar events.
-2. **Simulate fetching today's calendar events** (mock data for easy demo).
-3. **Summarize** the results in a clear, human-readable format.
-
-It includes a lightweight observability logger that prints detailed events and can optionally POST them to a webhook endpoint for monitoring.
-
-This project is perfect for hackathons, demos, or anyone exploring smart automation agents.
+![Banner](https://img.shields.io/badge/Project-Observo-blueviolet?style=for-the-badge&logo=openai)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
 
-## 🔹 Features
-- Modern and aesthetic logging output `[OBSERVE]`.
-- Fetches today's meetings (simulated events).
-- Generates GPT-powered planning steps and summaries.
-- Fully configurable via `.env` for OpenRouter API key.
-- Easy to set up and run on any machine.
+## 🌟 Overview
+
+**Observo** is an intelligent, event-driven observability agent that demonstrates how AI models can plan, execute, and summarize tasks while maintaining clear event logs.  
+Built with **OpenRouter (GPT-4o-mini)**, it showcases structured AI reasoning and logging using Python — ideal for hackathons, observability tools, and lightweight automation agents.
+
+🎥 **Demo Video:** [Click Here to Watch](https://drive.google.com/drive/folders/1Km6RDOt2cz7LKfz3ockOlvxfc91w5VkS)
 
 ---
 
-## 🔹 Files in the Repo
-- `main.py` - Core agent code.
-- `.env` - Hidden configuration file for your API key.
-- `.gitignore` - Excludes sensitive and cache files.
-- `friction_log.md` - Optional notes/log for your development process.
-- `requirements.txt` - Python dependencies.
-- `README.md` - This file.
+## 🧠 What Observo Does
+
+1. **Logs Every Step:** Tracks planning, execution, and results in real-time.
+2. **Plans Intelligently:** Uses GPT-4o-mini to generate a short plan for a given task.
+3. **Executes Smartly:** Simulates fetching “today’s meetings” from a fake calendar system.
+4. **Summarizes Automatically:** Generates a natural-language summary of the agent’s work.
+5. **Observes Everything:** Sends logs to an external webhook (observability endpoint).
 
 ---
 
-## 🔹 Setup Instructions
-Follow these steps to run Observo on your machine:
+## 🏗️ Project Structure
 
-### 1️⃣ Clone the Repository
-You can download the ZIP from GitHub or clone using HTTPS:
+```
+📦 agent-observability-bridge
+├── main.py              # Core logic of the Observo agent
+├── .env                 # API key stored securely (not shared)
+├── .gitignore           # To prevent secrets from being pushed
+├── requirements.txt     # All dependencies
+├── friction_log.md      # Development notes (optional)
+└── README.md            # You are here 😎
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+Follow these **simple steps** to get Observo running locally:
+
+### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/Nitanshu715/observo.git
+git clone https://github.com/your-username/observo.git
 cd observo
-````
+```
 
-### 2️⃣ Install Dependencies
+### **2️⃣ Create a Virtual Environment**
+```bash
+python -m venv venv
+venv\Scripts\activate   # On Windows
+source venv/bin/activate  # On Mac/Linux
+```
 
-Install Python 3.10+ and the required libraries:
-
+### **3️⃣ Install Dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Setup Environment Variables
+### **4️⃣ Create a `.env` File**
+Inside your project folder, create a `.env` file and add this line:
 
-Create a `.env` file in the root of the repo with the following:
-
-```env
+```
 OPENROUTER_API_KEY=your_openrouter_api_key_here
 ```
 
-> **Note:** Replace `your_openrouter_api_key_here` with your real OpenRouter API key.
+> ⚠️ **Important:** Never commit your real API key. This is your personal credential.
 
-### 4️⃣ Run the Agent
-
-Execute the main script:
-
+### **5️⃣ Run the Project**
 ```bash
 python main.py
 ```
 
-You will see real-time `[OBSERVE]` logs and the final summary output at the end.
-
-### 5️⃣ Optional: Observability Webhook
-
-You can replace the `endpoint` in `main.py` for `AgentObserver` with your own webhook to capture logs remotely.
-
-Example:
-
-```python
-observer = AgentObserver(endpoint="https://webhook.site/YOUR_UNIQUE_ID")
-```
-
----
-
-## 🔹 How It Works
-
-1. **Agent Start** - Logs the user input.
-2. **Planning** - Calls GPT-4o-mini to create a short, step-by-step plan.
-3. **Execution** - Fetches today's calendar events (mocked in `fetch_todays_events()`).
-4. **Summarization** - GPT-4o-mini summarizes what the agent achieved.
-5. **Agent End** - Logs the final output summary.
-
-> Everything is printed with timestamps and optionally sent to the webhook.
-
----
-
-## 🔹 Example Output
+If successful, you’ll see structured logs in your terminal and the final AI-generated summary like this:
 
 ```
-[OBSERVE] {
-  "event": "agent_start",
-  "details": {"input": "today's meetings"},
-  "timestamp": 1761156314.3524206
-}
-...
 🎯 Final Output: {
-  "summary": "The agent effectively managed today's meetings by coordinating schedules, ensuring all participants were informed, and facilitating smooth discussions. Key objectives were met, decisions were made, and action items were assigned for follow-up. Overall, the meetings were productive and aligned with the team's goals."
+  "summary": "The agent successfully organized today's meetings..."
 }
 ```
 
 ---
 
-## 🔹 Contributing
+## 📊 Example Output
 
-* Fork the repository.
-* Create your branch: `git checkout -b feature/YourFeature`
-* Commit your changes: `git commit -am 'Add new feature'`
-* Push to the branch: `git push origin feature/YourFeature`
-* Open a Pull Request.
-
----
-
-## 🔹 License
-
-This project is licensed under the MIT License.
+```
+[OBSERVE] { "event": "planning_result", "plan": "Access Calendar API, Set Date Range, Fetch Events..." }
+[OBSERVE] { "event": "tool_execution_result", "details": { "events": "09:00 AM - Team Standup..." } }
+🎯 Final Output: {
+  "summary": "The agent effectively managed today's meetings..."
+}
+```
 
 ---
 
-## 🔹 Contact
+## 🧩 Tech Stack
 
-Nitanshu Tak
-[GitHub](https://github.com/Nitanshu715)
-Email: [nitanshu@example.com](mailto:nitanshu@example.com)
+| Component | Technology Used |
+|------------|----------------|
+| 💬 Language | Python 3.10+ |
+| 🧠 AI Model | GPT-4o-mini (via OpenRouter) |
+| 🧰 Logging | Webhook + Observability Layer |
+| 🧪 Frameworks | `requests`, `dotenv`, `openai` |
 
 ---
 
-> Build, observe, and automate your meetings seamlessly with **Observo**! 🚀
+## 🌍 Environment Variables
+
+| Variable | Description |
+|-----------|-------------|
+| `OPENROUTER_API_KEY` | Your OpenRouter API key (kept private in `.env`) |
+
+---
+
+## 🪄 Example Workflow
+
+| Step | Description |
+|------|--------------|
+| 🧩 Plan | The agent generates a plan using GPT |
+| ⚙️ Execute | Fetches calendar data (simulated) |
+| 🧾 Log | Sends logs to webhook |
+| 🧠 Summarize | Summarizes what the agent accomplished |
+
+---
+
+## 🧠 How It Works Internally
+
+The flow is divided into 3 stages:
+
+1. **Planning Stage:** Uses GPT-4o-mini to design 3-step plan.  
+2. **Execution Stage:** Simulates fetching meeting events.  
+3. **Summarization Stage:** Produces a readable summary of achievements.
+
+Each stage is **observed and logged** for transparency and debugging.
+
+---
+
+## 🧰 Dependencies
+
+All required packages are listed in `requirements.txt`:
+
+```
+openai==1.30.0
+requests==2.32.0
+python-dotenv==1.0.1
+```
+
+To install all dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 📹 Demo Video
+
+▶️ **Watch Demo:** [Click Here](https://drive.google.com/drive/folders/1Km6RDOt2cz7LKfz3ockOlvxfc91w5VkS)
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** — free to use, modify, and distribute.
+
+---
+
+## 💡 Future Enhancements
+
+- Integration with Google or Outlook Calendar API  
+- Real-time observability dashboard (with Grafana)  
+- Add database logging (MongoDB or PostgreSQL)  
+- Multi-agent collaboration  
+
+---
+
+## ✨ Author
+
+👨‍💻 **Nitanshu Tak**  
+🎓 B.Tech CSE | Cloud Computing & Virtualization Technology  
+💭 Interests: AI/ML | Cloud
+
+🔗 [LinkedIn](https://www.linkedin.com/in/nitanshu-tak-89a1ba289/?originalSubdomain=in) • [GitHub](https://github.com/Nitanshu715)
+
+---
+
+⭐ *If you like this project, consider giving it a star on GitHub!* ⭐
 
