@@ -1,6 +1,5 @@
 # 🚀 Observo: The AI-Powered Observability Agent
 
-![Banner](https://1000logos.net/openai-logo/)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
 ![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
